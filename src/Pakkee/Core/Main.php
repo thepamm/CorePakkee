@@ -19,6 +19,7 @@ class Main extends PluginBase implements Listener{
 	
 	public function onJoin(PlayerJoinEvent $ev){
 		$player = $ev->getPlayer();
+		//Da Items Al Entrar A El Servidor
 	}
 
 	public function onDisable() : void{
