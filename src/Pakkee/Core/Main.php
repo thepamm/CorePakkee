@@ -6,22 +6,16 @@ namespace Pakkee\Core;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\Player;
-use pocketmine\command\{Command, CommandSender};
-use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerQuitEvent;
-use pocketmine\event\player\PlayerPreLoginEvent;
-use pocketmine\event\player\PlayerChatEvent;
-use pocketmine\event\player\PlayerInteractEvent;
-use pocketmine\event\player\PlayerMoveEvent;
-use pocketmine\utils\TextFormat as Color;
-use pocketmine\utils\Config;
- 
 class Main extends PluginBase implements Listener{
  
 	public function onEnable() : void{
 		$this->getLogger()->info("§aCorePakkee Cargado");
-		$this->getServer()->getPluginManager()->registerEvents(new Items($this), $this);
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+	}
+	
+	public function onJoin(PlayerJoinEvent $ev){
+		$player = $ev->getPlayer();
+		//Da Items Al Entrar A El Servidor
 	}
 
 	public function onDisable() : void{
