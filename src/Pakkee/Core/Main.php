@@ -13,7 +13,7 @@ class Main extends PluginBase implements Listener{
  
 	public function onEnable() : void{
 		$this->getLogger()->info("§aCorePakkee Cargado");
-		$this->getServer()->getPluginManager()->registerEvents(new Items($this), $this);
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
 	public function onDisable() : void{
