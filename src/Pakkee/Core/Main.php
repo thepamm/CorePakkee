@@ -72,6 +72,16 @@ class Main extends PluginBase implements Listener{
       	$player->getInventory()->setItem(6, Item::get(377, 0, 1)->setCustomName("§cInfo"));
       	$player->getInventory()->setItem(4, Item::get(345, 0, 1)->setCustomName("§eUtils"));
     }
+	
+	public function onInteract(PlayerInteractEvent $event)
+    {
+        $player = $event->getPlayer();
+        $in = $event->getPlayer()->getInventory()->getItemInHand()->getCustomName();
+		$inv = $player->getInventory();
+		$name = $player->getName();
+      if ($event->getItem()->getId() == 377 and $event->getItem()->getCustomName() == "§cInfo") {
+       $player->sendMessage(Color::RED . "Prueba De Mensajes.");
+	      }
 }
 
 ?>
