@@ -38,7 +38,7 @@ class Main extends PluginBase implements Listener{
 	//Cuando se usa el item con el nombre indicado...
 	public function onUse( PlayerInteractEvent $ev ){
 		$player = $ev->getPlayer();
-		$item = $ev->getPlayer();
+		$item = $ev->getItem();
 		switch( $item->getName() ){
 			case "§7Hide Players":
 				$player->addTitle("§7Hide Players");
