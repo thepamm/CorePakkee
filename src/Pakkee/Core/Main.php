@@ -41,17 +41,22 @@ class Main extends PluginBase implements Listener{
 		$item = $ev->getPlayer();
 		switch( $item->getName() ){
 			case "§7Hide Players":
+				$player->addTitle("§7Hide Players");
 				return true;
 			case "§aPlayers On/Off":
+				$player->addTitle("§aPlayers On/Off");
 				return true;
 			case "§bGames":
+				$player->addTitle("§bGames");
 				return true;
 			case "§cInfo":
+				$player->addTitle("§cInfo");
 				return true;
 			case "§eUtils":
+				$player->addTitle("§eUtils");
 				return true;
 			case default:
-				return false;
+				return true;
 		}
 	}
 
