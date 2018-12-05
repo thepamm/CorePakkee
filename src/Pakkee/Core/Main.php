@@ -34,6 +34,26 @@ class Main extends PluginBase implements Listener{
 		//Da Items Al Entrar A El Servidor
 		giveGadgets($player);
 	}
+	
+	//Cuando se usa el item con el nombre indicado...
+	public function onUse( PlayerInteractEvent $ev ){
+		$player = $ev->getPlayer();
+		$item = $ev->getPlayer();
+		switch( $item->getName() ){
+			case "§7Hide Players":
+				return true;
+			case "§aPlayers On/Off":
+				return true;
+			case "§bGames":
+				return true;
+			case "§cInfo":
+				return true;
+			case "§eUtils":
+				return true;
+			case default:
+				return false;
+		}
+	}
 
 	public function onDisable() : void{
 		$this->getLogger()->info("§cCorePakkee Detenido");
