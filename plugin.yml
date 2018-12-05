@@ -1,6 +1,7 @@
 name: coreUI
 author: ThePammYT + MikeGamerYT
-main: 
+main: Pakkee\Core
+description: CorePakkee
 version: 1.0.0
 api:
 - 1.0.0
