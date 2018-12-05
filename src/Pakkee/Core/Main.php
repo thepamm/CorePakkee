@@ -55,7 +55,7 @@ class Main extends PluginBase implements Listener{
 			case "§eUtils":
 				$player->addTitle("§eUtils");
 				return true;
-			case default:
+			case "default":
 				return true;
 		}
 	}
