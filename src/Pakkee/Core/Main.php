@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener{
 	public function onJoin(PlayerJoinEvent $ev){
 		$player = $ev->getPlayer();
 		//Da Items Al Entrar A El Servidor
-		giveGadgets($player);
+		$this->giveGadgets($player);
 	}
 	
 	//Cuando se usa el item con el nombre indicado...
