@@ -29,6 +29,16 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
+	public function onCommand( CommandSender $sender, Command $command, string $label, array $args ) : bool{
+	    switch($command->getName()){
+	      case "corecfg":
+		$sender->sendMessage("Juegos no disponibles.");
+		return true;
+	      default:
+		return false;
+	    }
+	}
+	
 	public function onJoin(PlayerJoinEvent $ev){
 		$player = $ev->getPlayer();
 		//Da Items Al Entrar A El Servidor
