@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener{
 	public function onCommand( CommandSender $sender, Command $command, string $label, array $args ) : bool{
 	    switch($command->getName()){
 	      case "corecfg":
-		$sender->sendMessage("Juegos no disponibles.");
+		$sender->sendMessage("Configuracion no disponible.");
 		return true;
 	      default:
 		return false;
@@ -72,6 +72,10 @@ class Main extends PluginBase implements Listener{
 
 	public function onDisable() : void{
 		$this->getLogger()->info("§cCorePakkee Detenido");
+	}
+	
+	public function cfgtpspawn(){
+		return false;
 	}
 	
 	public function giveGadgets($player){
