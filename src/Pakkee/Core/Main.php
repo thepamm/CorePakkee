@@ -50,20 +50,20 @@ class Main extends PluginBase implements Listener{
 		$player = $ev->getPlayer();
 		$item = $ev->getItem();
 		switch( $item->getName() ){
-			case "§7Hide Players":
-				$player->addTitle("§7Hide Players");
+			case "§7Particulas":
+				$player->addTitle("§7Particulas");
 				return true;
-			case "§aPlayers On/Off":
-				$player->addTitle("§aPlayers On/Off");
+			case "§aInfo":
+				$player->addTitle("§aInfo");
 				return true;
 			case "§bGames":
 				$player->addTitle("§bGames");
 				return true;
-			case "§cInfo":
-				$player->addTitle("§cInfo");
+			case "§cRanks":
+				$player->addTitle("§cRanks");
 				return true;
-			case "§eUtils":
-				$player->addTitle("§eUtils");
+			case "§eFly":
+				$player->addTitle("§eFly");
 				return true;
 			case "default":
 				return true;
@@ -80,11 +80,11 @@ class Main extends PluginBase implements Listener{
 	
 	public function giveGadgets($player){
     	$player->getInventory()->clearAll();
-  	$player->getInventory()->setItem(0, Item::get(369, 0, 1)->setCustomName("§7Hide Players"));
-      	$player->getInventory()->setItem(8, Item::get(403, 0, 1)->setCustomName("§aPlayers On/Off"));
-      	$player->getInventory()->setItem(2, Item::get(399, 0, 1)->setCustomName("§bGames"));
-      	$player->getInventory()->setItem(6, Item::get(377, 0, 1)->setCustomName("§cInfo"));
-      	$player->getInventory()->setItem(4, Item::get(345, 0, 1)->setCustomName("§eUtils"));
+  	$player->getInventory()->setItem(0, Item::get(369, 0, 1)->setCustomName("§7Particles"));
+      	$player->getInventory()->setItem(8, Item::get(340, 0, 1)->setCustomName("§aInfo"));
+      	$player->getInventory()->setItem(2, Item::get(378, 0, 1)->setCustomName("§bGames"));
+      	$player->getInventory()->setItem(6, Item::get(410, 0, 1)->setCustomName("§cRanks"));
+      	$player->getInventory()->setItem(4, Item::get(288, 0, 1)->setCustomName("§eFly"));
     }
 }
 
